@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0043)https://sites.google.com/site/fpgaandco/pid -->
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage" style="height: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<script src="./PID demo - eStuffz_files/cb=gapi.loaded_1" async=""></script><script src="./PID demo - eStuffz_files/cb=gapi(1).loaded_0" async=""></script><script type="text/javascript">/* Copyright 2008 Google. */ (function() { (function(){function e(g){this.t={};this.tick=function(h,k,f){this.t[h]=[void 0!=f?f:(new Date).getTime(),k];if(void 0==f)try{window.console.timeStamp("CSI/"+h)}catch(m){}};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var l=0<d?new e(d):new e;window.jstiming={Timer:e,load:l};if(a){var b=a.navigationStart;0<b&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;0<b&&d>=b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",
+d),c.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&0<b&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,c&&0<b&&(c.tick("_tbnd",void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+</script>
+<link rel="shortcut icon" href="https://sites.google.com/site/fpgaandco/_/rsrc/1472782136717/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/df2703/system/app/images/apple-touch-icon.png" type="image/png">
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
+window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
+</script>
+<script>
+
+  
+
+  var breadcrumbs = [{"path":"/site/fpgaandco/pid","deleted":false,"title":"PID demo","dir":"ltr"}];
+  var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/df2703/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["\u4e00\u5206\u9418\u524d","__duration__ \u5206\u9418\u524d","\u4e00\u5c0f\u6642\u524d","__duration__ \u500b\u5c0f\u6642\u524d"];
+
+  
+  
+
+  
+
+  var webspace = {"gvizGstaticVersion":"current","enableAnalytics":true,"pageSharingId":"jotspot_page","codeembeds":{"outerIframeSrc":"https://www.gstatic.com/jotspot/embeds/code/0f08d42392f2000e7e3f3daf5b427a43/outer_iframe.html","innerIframeSrc":"https://414954193-jotspot-embeds.googleusercontent.com/code/8d87fa64604b2a11fae2ed06104c58d3/inner_iframe.html"},"enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"eStuffz","jot2atari":{"eligibility":"ineligible"},"onepickUrl":"https://docs.google.com/picker","adsensePublisherId":"ca-pub-7353704844237744","features":{"moreMobileStyleImprovements":null,"subscriptionDataMigrationInProgress":false,"plusBadge":false},"isPublic":true,"newSitesBaseUrl":"https://sites.google.com","isConsumer":true,"serverFlags":{"jot2AtariLearnMoreUrl":"https://support.google.com/sites/answer/7035197"},"domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue\u003dhttps://sites.google.com/site/fpgaandco/pid\u0026service\u003djotspot","analyticsAccountId":"UA-29494319-1","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":false,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/zh/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/df2703/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/df2703/system/js/codemirror.js","https://ssl.gstatic.com/sites/p/df2703/system/app/css/codemirror_css.css","https://ssl.gstatic.com/sites/p/df2703/system/js/trog_edit__zh_tw.js","https://ssl.gstatic.com/sites/p/df2703/system/app/css/trogedit.css","/site/fpgaandco/_/rsrc/1568877666000/system/app/css/editor.css","https://ssl.gstatic.com/sites/p/df2703/system/app/css/codeeditor.css","/site/fpgaandco/_/rsrc/1568877666000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/fpgaandco","name":"fpgaandco","siteTemplateId":false,"siteNoticeRevision":1,"siteNoticeUrlAddress":"/site/fpgaandco/disclaimer","siteNoticeMessage":"","page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":null,"parentWuid":null,"siteLocale":"en","timeZone":"Asia/Hong_Kong","type":"text","title":"PID demo","locale":"zh_TW","wuid":"wuid:gx:513b05e2759397b0","revision":16,"path":"/pid","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"pid","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"\u7db2\u9801"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","onePickToken":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false},"gadgets":{"baseUri":"/site/fpgaandco/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<meta name="title" content="PID demo - eStuffz">
+<meta itemprop="name" content="PID demo - eStuffz">
+<meta property="og:title" content="PID demo - eStuffz">
+<meta name="description" content="electronics,AVR,ARM Cortex,Atmega,DE0-Nano,FPGA,Raspberry Pi, raspi,RC,quadcopters,DIY,making,drones">
+<meta itemprop="description" content="electronics,AVR,ARM Cortex,Atmega,DE0-Nano,FPGA,Raspberry Pi, raspi,RC,quadcopters,DIY,making,drones">
+<meta id="meta-tag-description" property="og:description" content="electronics,AVR,ARM Cortex,Atmega,DE0-Nano,FPGA,Raspberry Pi, raspi,RC,quadcopters,DIY,making,drones">
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="./PID demo - eStuffz_files/standard-css-simplywhite-ltr-ltr.css">
+<link rel="stylesheet" type="text/css" href="./PID demo - eStuffz_files/overlay.css">
+<link rel="stylesheet" type="text/css" href="./PID demo - eStuffz_files/allthemes-view.css">
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/fpgaandco/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>PID demo - eStuffz</title>
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+<script type="text/javascript" charset="UTF-8" src="./PID demo - eStuffz_files/platform.js" gapi_processed="true"></script><script src="./PID demo - eStuffz_files/ga.js"></script><script src="./PID demo - eStuffz_files/f.txt"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./PID demo - eStuffz_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./PID demo - eStuffz_files/main_zh-TW.js"></script><script type="text/javascript" charset="UTF-8" src="./PID demo - eStuffz_files/element_main.js"></script><style>.goog-te-ftab-float {z-index:9999999; overflow:visible; position:fixed; _position:absolute;top:auto;left:auto;bottom:0px; _top:expression((-0-document.getElementById('\3a 0.floatContainer').offsetHeight+(hack3=document.documentElement.clientHeight||document.body.clientHeight)+(hack4=document.documentElement.scrollTop||document.body.scrollTop))+'px');right:20px; _left:expression((-20-document.getElementById('\3a 0.floatContainer').offsetWidth+(hack5=document.documentElement.clientWidth||document.body.clientWidth)+(hack6=document.documentElement.scrollLeft||document.body.scrollLeft))+'px');}</style></head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            " style="position: relative; min-height: 100%; top: 0px;">
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything" class="">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
+<tbody><tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class="" role="banner" style="height: 70px"><div class="sites-header-cell-buffer-wrapper"><h2><a href="https://sites.google.com/site/fpgaandco/" dir="ltr" id="sites-chrome-userheader-title">eStuffz</a></h2></div></td><td class="sites-layout-searchbox  "><div class="sites-header-cell-buffer-wrapper"><form id="sites-searchbox-form" action="https://sites.google.com/site/fpgaandco/system/app/pages/search" role="search"><input type="hidden" id="sites-searchbox-scope" name="scope" value="search-site"><input type="text" id="jot-ui-searchInput" name="q" size="20" value="" aria-label="Search this site"><div id="sites-searchbox-button-set" class="goog-inline-block"><div role="button" id="sites-searchbox-search-button" class="goog-inline-block jfk-button jfk-button-standard" tabindex="0" style="user-select: none;">Search this site</div></div></form></div></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tbody><tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left initial" style="width:200px">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotid="navList"><li class="nav-first "><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/home" jotid="wuid:gx:3b2a480be041e60" class="sites-navigation-link">Home</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/sunrise" jotid="wuid:gx:6b81bad5b6170418" class="sites-navigation-link">Circadia - sunrise  lamp</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/NiosII-standalone" jotid="wuid:gx:57521653d73bf82d" class="sites-navigation-link">DE0-Nano | NiosII untethered</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/de0-nano-pinout" jotid="wuid:gx:19bbdbced32e93d7" class="sites-navigation-link">DE0-Nano | easier pinout</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/de0-nano-niosii-with-sdram" jotid="wuid:gx:a3fc61a79079eb3" class="sites-navigation-link">DE0-Nano | NiosII with SDRAM</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/de0-nano-psp-screen" jotid="wuid:gx:55fee9d6439883a3" class="sites-navigation-link">DE0-Nano | PSP Screen</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/de0-nano-niosii-lcd-driver" jotid="wuid:gx:5e26e05bcbd07f55" class="sites-navigation-link">DE0-Nano | NiosII LCD driver</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/de0-nano-analog-video" jotid="wuid:gx:3e5e55eee2ef49db" class="sites-navigation-link">DE0-Nano | analog video</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/fooling-the-beagle" jotid="wuid:gx:44c9f1187b00d224" class="sites-navigation-link">Fooling the Beagle (VGA out)</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/level-shifting-i2c" jotid="wuid:gx:2a1b192f725e5514" class="sites-navigation-link">Level shifting I2C</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/minima" jotid="wuid:gx:4c814ddcef12ea49" class="sites-navigation-link">Minima - yet another quad copter build</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/minimabl" jotid="wuid:gx:3b3d98f9a3faaef7" class="sites-navigation-link">MinimaBL</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/etchtank" jotid="wuid:gx:6c7946432815fd0b" class="sites-navigation-link">Etch tank</a></div></li><li class=""><div class="current-bg" jotid="wuid:gx:513b05e2759397b0" dir="ltr" style="padding-left: 5px;">PID demo</div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/3d-printing-artwork" jotid="wuid:gx:5987e0b5f8eb2ed7" class="sites-navigation-link">3D Printing - Artwork</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/gimbal" jotid="wuid:gx:18c59c8d062b0a1f" class="sites-navigation-link">Gimbal</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/sparkmaker-hacks" jotid="wuid:gx:7b100b3d42b03534" class="sites-navigation-link">Sparkmaker hacks</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/contact" jotid="wuid:gx:1a8bd549b70ed12e" class="sites-navigation-link">Contact</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/disclaimer" jotid="wuid:gx:1ebdefaf2f68e233" class="sites-navigation-link">Disclaimer</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://sites.google.com/site/fpgaandco/system/app/pages/sitemap/hierarchy" jotid="wuid:gx:350f53fb4210c2e0" class="sites-navigation-link">Sitemap</a></div></li></ul></div></div>
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas" role="main">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
+</div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
+<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">PID demo</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><div></div><div style="text-align:left"><div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed sites-embed-full-width" style="width:100%;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe title="hello world example" width="100%" height="410" scrolling="no" frameborder="0" id="605591909" name="605591909" allowtransparency="true" class="igm" src="./PID demo - eStuffz_files/ifr.html"></iframe></div></div></div></div><div></div><div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:100px;"><div class="sites-embed-content sites-embed-type-plusone"><div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1569832154700" name="I0_1569832154700" src="./PID demo - eStuffz_files/fastbutton.html" data-gapiattached="true"></iframe></div><div class="g-plusone" data-count="false" data-size="medium" data-source="google:sites" data-gapiscan="true" data-onload="true" data-gapistub="true"></div></div></div></div>
+<div>This is a little Processing sketch I wrote for playing with the parameters of a PID controller. Getting an interactive, visual feedback of the response can go a long way when trying to figure out the dependency between the values and the effect on the system.</div><div><br></div><div>Changes to the parameters on the right will update the simulation instantly. Use the horizontal slider to change the set position (the position the controller wants to reach). The vertical slider changes the slope for the car to simulate an&nbsp;asymmetrical&nbsp;system. Right-clicking a slider resets it.</div><div><br></div><div>The graph at the bottom displays some system states over time. Dark grey is the set point, blue is the current position and green is the motor force.</div><div>The little force vectors draw over the car are the separate components that went into the controller reaction.&nbsp;</div><div>Red for <font color="#FF0000">proportional</font>, green for <font color="#00FF00">integral </font>and blue for <font color="#0000FF">derivative</font>.&nbsp;</div><div><br></div><div>The motor in this case is a "super motor", it reaches its desired torque instantaneously. I might add a better model for this later on to get a more realistic response.</div><div><br></div><div>For a general explanation see the PID controller wikipedia page. It's pretty good.</div><div><br></div><div>Find the source code below.</div></div></td></tr></tbody></table>
+</div> 
+</div> 
+<div id="sites-canvas-bottom-panel">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-subpages" class="sites-canvas-bottom-panel-wrapper" style="">
+<div class="sites-subpages">
+            Subpages <span id="subpages-total-number">(1):</span>
+<span>
+<a href="https://sites.google.com/site/fpgaandco/pid/pid_source" dir="ltr">pid_source</a>
+</span>
+</div>
+</div>
+<div id="sites-attachments-container">
+</div>
+</div>
+</div> 
+</td> 
+</tr>
+</tbody></table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter" role="navigation"><p><a class="sites-system-link" href="https://accounts.google.com/ServiceLogin?continue=https://sites.google.com/site/fpgaandco/pid&amp;service=jotspot">登入</a><span aria-hidden="true">|</span><a class="sites-system-link" href="https://sites.google.com/site/fpgaandco/system/app/pages/reportAbuse" target="_blank">檢舉濫用情形</a><span aria-hidden="true">|</span><a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">列印頁面</a><span aria-hidden="true">|</span><span class="sites-system-link">由 <b class="powered-by"><a href="http://sites.google.com/site">Google 協作平台</a></b>技術提供</span></p></div>
+</div>
+</div> 
+</div> 
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="./PID demo - eStuffz_files/jot_min_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/fpgaandco/system/app/pages/admin/settings"});
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("2bd", "Navigation", false);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false,
+            false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+        JOT_insertTranslateCode('zh_TW', 'en');
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          JOT_setupPostRenderingManager();
+        </script>
+<script type="text/javascript">
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        </script>
+<script type="text/javascript">
+          sites.codeembed.init();
+        </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./PID demo - eStuffz_files/translate_24dp.png" width="20" height="20" alt="Google 翻譯"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">建議更好的譯法</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><iframe name="oauth2relay912534772" id="oauth2relay912534772" src="./PID demo - eStuffz_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id=":0.floatContainer" class=" goog-te-ftab-float" style="box-sizing: content-box; width: 60px; height: 24px;"><iframe id=":0.container" frameborder="0" src="javascript:&#39;&#39;" class="goog-te-ftab-frame skiptranslate" style="visibility: visible; box-sizing: content-box; width: 60px; height: 24px;" src="./PID demo - eStuffz_files/saved_resource.html"></iframe></div></body></html>
